@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KRUDOKI Arc - Official Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #120a1c;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    /* Logo Header Utama */
+    .profile-logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 3px solid #a855f7;
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.8), inset 0 0 15px rgba(168, 85, 247, 0.5);
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+    }
+    .profile-logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      margin: 0 0 4px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.8));
+    }
+    p.subtitle {
+      margin: 0 0 28px 0;
+      font-size: 13px;
+      color: #d8b4fe;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px #9333ea;
+    }
+
+    /* Container Link */
+    .container {
+      width: 100%;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Base Styling Tombol */
+    .link-btn {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      background: rgba(30, 16, 48, 0.85);
+      border: 2px solid #a855f7;
+      border-radius: 14px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.3), inset 0 0 10px rgba(168, 85, 247, 0.2);
+      transition: all 0.2s ease-in-out;
+    }
+    .link-btn:hover {
+      background: #a855f7;
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.9);
+      transform: translateY(-3px);
+    }
+
+    /* Wrapper Ikon CSS */
+    .icon-box {
+      width: 36px;
+      height: 36px;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* 1. Logo TikTok (CSS) */
+    .icon-tiktok {
+      width: 14px;
+      height: 20px;
+      border-left: 3px solid #00f2fe;
+      border-bottom: 3px solid #00f2fe;
+      border-bottom-left-radius: 10px 10px;
+      position: relative;
+      filter: drop-shadow(-2px -2px 0px #ff0050);
+    }
+    .icon-tiktok::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: -2px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 3px solid #00f2fe;
+      border-right: 3px solid #00f2fe;
+      border-bottom-right-radius: 10px;
+    }
+
+    /* 2. Logo Saweria (CSS) */
+    .icon-saweria {
+      width: 18px;
+      height: 18px;
+      background: #c084fc;
+      transform: rotate(45deg);
+      position: relative;
+      box-shadow: 0 0 8px #c084fc;
+    }
+    .icon-saweria::before,
+    .icon-saweria::after {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #c084fc;
+      position: absolute;
+    }
+    .icon-saweria::before { left: -10px; }
+    .icon-saweria::after { top: -10px; }
+
+    /* 3. Logo Gamepad (CSS) */
+    .icon-gamepad {
+      width: 26px;
+      height: 16px;
+      border: 2px solid #e9d5ff;
+      border-radius: 6px;
+      position: relative;
+      background: rgba(168, 85, 247, 0.3);
+    }
+    .icon-gamepad::before {
+      content: '+';
+      position: absolute;
+      left: 3px;
+      top: -4px;
+      font-size: 14px;
+      color: #e9d5ff;
+    }
+    .icon-gamepad::after {
+      content: '';
+      position: absolute;
+      right: 4px;
+      top: 5px;
+      width: 4px;
+      height: 4px;
+      background: #e9d5ff;
+      border-radius: 50%;
+      box-shadow: -6px 0 0 #e9d5ff;
+    }
+
+    /* 4. Logo Discord (CSS) */
+    .icon-discord {
+      width: 22px;
+      height: 16px;
+      background: #e9d5ff;
+      border-radius: 6px 6px 10px 10px;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 3px;
+    }
+    .icon-discord::before,
+    .icon-discord::after {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #120a1c;
+      border-radius: 50%;
+    }
+
+    .btn-text {
+      flex-grow: 1;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo Header Gambar KRUDOKI Arc -->
+  <img src="logo.png" alt="KRUDOKI Arc Logo" class="profile-logo">
+
+  <h1>KRUDOKI Arc</h1>
+  <p class="subtitle">Official Link Hub</p>
+
+  <div class="container">
+    
+    <!-- 1. TikTok -->
+    <a href="https://tiktok.com/@USERNAME_TIKTOK" target="_blank" class="link-btn">
+      <div class="icon-box"><div class="icon-tiktok"></div></div>
+      <span class="btn-text">TikTok Official</span>
+    </a>
+
+    <!-- 2. Saweria -->
+    <a href="https://saweria.co/USERNAME_SAWERIA" target="_blank" class="link-btn">
+      <div class="icon-box"><div class="icon-saweria"></div></div>
+      <span class="btn-text">Saweria Donasi</span>
+    </a>
+
+    <!-- 3. Grup Mabar Krudoki188 -->
+    <a href="https://chat.whatsapp.com/LINK_GRUP_WA" target="_blank" class="link-btn">
+      <div class="icon-box"><div class="icon-gamepad"></div></div>
+      <span class="btn-text">Grup Mabar Krudoki188</span>
+    </a>
+
+    <!-- 4. Discord -->
+    <a href="https://discord.gg/LINK_DISCORD" target="_blank" class="link-btn">
+      <div class="icon-box"><div class="icon-discord"></div></div>
+      <span class="btn-text">Community Discord</span>
+    </a>
+
+  </div>
+
+</body>
+</html>
